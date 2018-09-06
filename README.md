@@ -5,7 +5,7 @@
 #### List of Garage routes:
 
 ROUTE  |  HTTP  | Description | Requirement
--------|--------|---------------------------
+-------|--------|-------------|-------------
 /garage/ | POST | Create a garage data | body (name, address, phone, email, maxCars)
 /garage/find/all | GET | Get all garages data | -
 /garage/find/:garageId | GET | Get a single garage data by it's ID | garage id through url parameter
@@ -15,7 +15,7 @@ ROUTE  |  HTTP  | Description | Requirement
 #### List of Car routes:
 
 ROUTE  |  HTTP  | Description | Requirement
--------|--------|---------------------------
+-------|--------|-------------|-------------
 /cars/ | POST | Create a car data | body (brand, model, year, color, mileage, engine, power, registration_date, price, image_url)
 /cars/find/ | GET | Get a car data by it's model name | body (keyword)
 /cars/find/all | GET | Get all cars data | -
