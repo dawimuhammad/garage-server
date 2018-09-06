@@ -182,7 +182,8 @@ class Controller {
 
     static update (req, res, next) {
         let carId = req.params.carId
-
+        
+        // get updated car field
         let { brand, model, year, color, mileage, engine, power, price, image_url } = req.body
 
         Car.findById(carId)
