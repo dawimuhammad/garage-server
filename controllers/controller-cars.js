@@ -189,7 +189,7 @@ class Controller {
         Car.findById(carId)
         .then( function(foundCar) {
             if (foundCar) {
-                res.json({ car : foundCar})
+                // res.json({ car : foundCar})
                 let car = foundCar
 
                 let updatedBrand = car.brand, updatedModel = car.model, updatedYear = car.year, updatedColor = car.color, updatedMileage = car.mileage, updatedEngine = car.engine, updatedPower = car.power,updatedPrice = car.price, updatedImageUrl = car.image_url
