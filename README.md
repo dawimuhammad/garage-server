@@ -37,6 +37,14 @@ npm start
 
 ```
 
+### Testing (Using Mocha Chai)
+
+```
+
+mocha
+
+```
+
 #### Hit the API using Insomnia/ Postman using url http://localhost:3000
 
 #### Access through browser website via http://localhost:3000

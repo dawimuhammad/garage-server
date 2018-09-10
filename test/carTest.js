@@ -5,6 +5,7 @@ const urlCar = 'http://localhost:3000/cars'
 
 chai.use(chaiHttp)
 
+let randomizedCarBrand = Math.random().toString(36).substr(2, 9)
 let createdCarId = ''
 
 describe('Car Controller Test', function() {
@@ -91,7 +92,6 @@ describe('Car Controller Test', function() {
             chai.request(urlCar)
             .post('/')
             .send({
-                model: 'Fortuner',
                 year: 2018,
                 color: 'test-color-value',
                 mileage: 200,
@@ -110,8 +110,8 @@ describe('Car Controller Test', function() {
             chai.request(urlCar)
             .post('/')
             .send({
-                brand: 'Toyota',
-                model: 'Fortuner',
+                brand: 'Random Car',
+                model: randomizedCarBrand,
                 year: 2018,
                 color: 'test-color-value',
                 mileage: 200,
@@ -121,7 +121,6 @@ describe('Car Controller Test', function() {
                 image_url: 'test-image-url-value'
             })
             .end( function(err, result) {
-                // console.log(result.body.createdCar)
                 createdCarId = result.body.createdCar._id
                 result.should.have.status(200)
                 result.body.should.have.own.property('createdCar')
